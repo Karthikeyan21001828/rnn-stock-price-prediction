@@ -5,18 +5,32 @@
 To develop a Recurrent Neural Network model for stock price prediction.
 
 ## Problem Statement and Dataset
+Develop a system for predicting stock prices using historical data. Implement an algorithm that preprocesses training and test datasets, trains a Bidirectional SimpleRNN model on the training data, and generates predictions for the test data. The model should be capable of handling sequences of stock prices with a length of 60, and the predictions should be scaled back to their original form. Visualize the real and predicted stock prices using matplotlib. Additionally, include author information in the output.
 
+![image](https://github.com/Karthikeyan21001828/rnn-stock-price-prediction/assets/93427303/d1a471ae-90d1-4179-9f86-b4092a82d83a)
 
 ## Design Steps
 
 ### Step 1:
-Write your own steps
-
+Import numpy, matplotlib, pandas, MinMaxScaler from sklearn, layers and Sequential from keras.
 ### Step 2:
-
+Load training dataset using pandas, extract relevant columns, perform Min-Max scaling.
 ### Step 3:
-
-
+Create input-output pairs with a sequence length of 60, reshape input data to fit the RNN model.
+### Step 4:
+Initialize a Sequential model, add a Bidirectional SimpleRNN layer with 60 units, add a Dense layer, compile the model with 'adam' optimizer and mean squared error loss.
+### Step 5:
+Fit the model to the training data for 100 epochs with a batch size of 32.
+### Step 6:
+Load test dataset using pandas, extract relevant columns, concatenate datasets, transform data using MinMaxScaler.
+### Step 7:
+Create input sequences for test data with a sequence length of 60, reshape test data to fit the model.
+### Step 8:
+Use the trained model to predict stock prices for test data, inverse transform predicted prices to original scale.
+### Step 9:
+Plot real and predicted stock prices using matplotlib, show plot with appropriate labels and legends.
+### Step 10:
+ Print the name and register number of the author.
 
 ## Program
 #### Name: Karthikeyan K
@@ -92,3 +106,4 @@ plt.show()
 
 
 ## Result
+A Recurrent Neural Network model for stock price prediction has been developed and executed successfully.
